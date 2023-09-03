@@ -14,8 +14,7 @@ def composer(f, g):
     >>> a2(5)
     108
     """
-    clash proxy test 
-    test   
+
     return lambda x: f(g(x))
 
 
@@ -34,7 +33,9 @@ def composite_identity(f, g):
     False
     """
     "*** YOUR CODE HERE ***"
+    return lambda x: composer(f,g)(x) == composer(g,f)(x)
 
+    
 
 def count_cond(condition):
     """Returns a function with one parameter N that counts all the numbers from
@@ -65,6 +66,16 @@ def count_cond(condition):
     """
     "*** YOUR CODE HERE ***"
 
+    def count_num(x):
+        count,i = 0, 1
+        while i <= x:
+            if condition(x,i) :
+                count += 1 
+            i += 1 
+        return count 
+
+    return count_num 
+    
 
 def multiple(a, b):
     """Return the smallest number n that is a multiple of both a and b.
@@ -75,6 +86,15 @@ def multiple(a, b):
     42
     """
     "*** YOUR CODE HERE ***"
+    maxnum = max(a,b) 
+    minnum = min(a,b) 
+
+    lcm = maxnum 
+    while lcm % minnum != 0 : 
+        lcm += maxnum
+    return lcm 
+
+
 
 
 def cycle(f1, f2, f3):
@@ -104,3 +124,16 @@ def cycle(f1, f2, f3):
     19
     """
     "*** YOUR CODE HERE ***"
+    def identity (n) : 
+        def my_cycle (x) : 
+            res = x 
+            for i in range(1,n+1) : 
+                if i % 3 == 0 : 
+                    res = f3(res) 
+                elif i % 3 == 1 : 
+                    res = f1(res)
+                elif i % 3 == 2 : 
+                    res = f2(res)
+            return res 
+        return my_cycle
+    return identity 
