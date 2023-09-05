@@ -198,6 +198,9 @@ def always_roll(n):
     assert n >= 0 and n <= 10
     # BEGIN PROBLEM 6
     "*** YOUR CODE HERE ***"
+    def func(num1,num2):
+        return n
+    return func 
     # END PROBLEM 6
 
 
@@ -228,6 +231,18 @@ def is_always_roll(strategy, goal=GOAL):
     """
     # BEGIN PROBLEM 7
     "*** YOUR CODE HERE ***"
+    score1 = 0 
+    score2 = 0
+    strat = strategy(score1,score2)
+    while score2 < goal : 
+        score1 = score1 + 1
+        end = strategy(score1,score2)
+        if strat != end : 
+            return False 
+        if score1 == goal :
+            score2 = score2 + 1
+            score1 = -1
+    return True
     # END PROBLEM 7
 
 
@@ -244,12 +259,23 @@ def make_averaged(original_function, total_samples=1000):
     """
     # BEGIN PROBLEM 8
     "*** YOUR CODE HERE ***"
+    def averaged_func(*args):
+        times = total_samples
+        sum = 0
+        result = 0 
+        while times > 0 :
+            result = original_function(*args)
+            sum += result 
+            times -= 1 
+        return sum/total_samples
+    return averaged_func
     # END PROBLEM 8
 
 
 def max_scoring_num_rolls(dice=six_sided, total_samples=1000):
     """Return the number of dice (1 to 10) that gives the highest average turn score
     by calling roll_dice with the provided DICE a total of TOTAL_SAMPLES times.
+
     Assume that the dice always return positive outcomes.
 
     >>> dice = make_test_dice(1, 6)
@@ -258,6 +284,15 @@ def max_scoring_num_rolls(dice=six_sided, total_samples=1000):
     """
     # BEGIN PROBLEM 9
     "*** YOUR CODE HERE ***"
+    max = 0
+    index = 1
+    for i in range(1,11):
+        average = make_averaged(roll_dice, total_samples)
+        result = average(i,dice)
+        if result > max :
+            max = result 
+            index = i
+    return index 
     # END PROBLEM 9
 
 
@@ -301,13 +336,29 @@ def tail_strategy(score, opponent_score, threshold=12, num_rolls=6):
     points, and returns NUM_ROLLS otherwise. Ignore score and Square Swine.
     """
     # BEGIN PROBLEM 10
-    return num_rolls  # Remove this line once implemented.
+    num = num_rolls 
+    tail_num = tail_points(opponent_score)
+    if tail_num >= threshold : 
+        num = 0
+    return num 
     # END PROBLEM 10
 
 
 def square_strategy(score, opponent_score, threshold=12, num_rolls=6):
     """This strategy returns 0 dice when your score would increase by at least threshold."""
     # BEGIN PROBLEM 11
+    num = num_rolls 
+    tail_num = tail_points(opponent_score)
+    new_score = tail_num + score 
+    #print(new_score)
+    if perfect_square(new_score) == True :
+        new_score = next_perfect_square(new_score)
+
+    difference = new_score - score 
+    #print(difference)
+    if difference >= threshold : 
+        return 0
+
     return num_rolls  # Remove this line once implemented.
     # END PROBLEM 11
 
@@ -318,6 +369,7 @@ def final_strategy(score, opponent_score):
     *** YOUR DESCRIPTION HERE ***
     """
     # BEGIN PROBLEM 12
+    
     return 6  # Remove this line once implemented.
     # END PROBLEM 12
 

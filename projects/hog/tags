@@ -1,0 +1,76 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/jiangpengyu/cs61a/projects/hog/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+DEFAULT_SERVER	hog_gui.py	/^DEFAULT_SERVER = "https:\/\/hog.cs61a.org"$/;"	v
+GOAL	hog.py	/^GOAL = 100  # The goal of Hog is to score 100 points.$/;"	v
+GUI_FOLDER	hog_gui.py	/^GUI_FOLDER = "gui_files\/"$/;"	v
+HogLoggingException	hog_gui.py	/^class HogLoggingException(Exception):$/;"	c
+PATHS	hog_gui.py	/^PATHS = {}$/;"	v
+PORT	hog_gui.py	/^PORT = 31415$/;"	v
+_PREFIX	ucb.py	/^_PREFIX = ''$/;"	v
+always_roll	hog.py	/^def always_roll(n):$/;"	f
+always_roll_5	hog.py	/^def always_roll_5(score, opponent_score):$/;"	f
+app	hog_gui.py	/^    app = start(PORT, DEFAULT_SERVER, GUI_FOLDER)$/;"	v
+average_win_rate	hog.py	/^def average_win_rate(strategy, baseline=always_roll(6)):$/;"	f
+averaged_func	hog.py	/^    def averaged_func(*args):$/;"	f	function:make_averaged	file:
+catch_up	hog.py	/^def catch_up(score, opponent_score):$/;"	f
+choose_and_print	hog_ui.py	/^    def choose_and_print(score, opponent_score):$/;"	f	function:printing_strategy	file:
+dice	default_graphics.py	/^dice = [$/;"	v
+dice	dice.py	/^    def dice():$/;"	f	function:make_fair_dice	file:
+dice	dice.py	/^    def dice():$/;"	f	function:make_test_dice	file:
+dice_and_print	hog_ui.py	/^    def dice_and_print():$/;"	f	function:printing_dice	file:
+draw_dice_graphic	hog_gui.py	/^def draw_dice_graphic(num):$/;"	f
+final_strategy	hog.py	/^def final_strategy(score, opponent_score):$/;"	f
+four_sided	dice.py	/^four_sided = make_fair_dice(4)$/;"	v
+func	hog.py	/^    def func(num1,num2):$/;"	f	function:always_roll	file:
+get_int	hog_ui.py	/^def get_int(prompt, lower, upper):$/;"	f
+handler	ucb.py	/^    def handler(signum, frame):$/;"	f	function:interact	file:
+interact	ucb.py	/^def interact(msg=None):$/;"	f
+interactive_strategy	hog_ui.py	/^def interactive_strategy(who):$/;"	f
+is_always_roll	hog.py	/^def is_always_roll(strategy, goal=GOAL):$/;"	f
+log	ucb.py	/^def log(message):$/;"	f
+log_current_line	ucb.py	/^def log_current_line():$/;"	f
+logged_dice	hog_gui.py	/^    def logged_dice():$/;"	f	function:take_turn	file:
+main	ucb.py	/^def main(fn):$/;"	f
+make_averaged	hog.py	/^def make_averaged(original_function, total_samples=1000):$/;"	f
+make_fair_dice	dice.py	/^def make_fair_dice(sides):$/;"	f
+make_test_dice	dice.py	/^def make_test_dice(*outcomes):$/;"	f
+max_scoring_num_rolls	hog.py	/^def max_scoring_num_rolls(dice=six_sided, total_samples=1000):$/;"	f
+mod_dice	hog_gui.py	/^    def mod_dice():$/;"	f	function:trace_play	file:
+mod_strategy	hog_gui.py	/^    def mod_strategy(who, my_score, opponent_score):$/;"	f	function:trace_play	file:
+next_perfect_square	hog.py	/^def next_perfect_square(score) :$/;"	f
+perfect_square	hog.py	/^def perfect_square(score):$/;"	f
+play	hog.py	/^def play(strategy0, strategy1, update,$/;"	f
+play_and_print	hog_ui.py	/^def play_and_print(strategy0, strategy1):$/;"	f
+play_with	hog_ui.py	/^def play_with(num_players):$/;"	f
+printing_dice	hog_ui.py	/^def printing_dice(dice):$/;"	f
+printing_strategy	hog_ui.py	/^def printing_strategy(who, strategy):$/;"	f
+roll_dice	hog.py	/^def roll_dice(num_rolls, dice=six_sided):$/;"	f
+run	hog.py	/^def run(*args):$/;"	f
+run	hog_ui.py	/^def run(*args):$/;"	f
+run_experiments	hog.py	/^def run_experiments():$/;"	f
+simple_update	hog.py	/^def simple_update(num_rolls, player_score, opponent_score, dice=six_sided):$/;"	f
+six_sided	dice.py	/^six_sided = make_fair_dice(6)$/;"	v
+square_strategy	hog.py	/^def square_strategy(score, opponent_score, threshold=12, num_rolls=6):$/;"	f
+square_update	hog.py	/^def square_update(num_rolls, player_score, opponent_score, dice=six_sided):$/;"	f
+square_update_and_print	hog_ui.py	/^def square_update_and_print(num_rolls, player_score, opponent_score, dice):$/;"	f
+strategy	hog_gui.py	/^        def strategy(*scores):$/;"	f	function:take_turn.strategy_for	file:
+strategy	hog_gui.py	/^def strategy(name, scores):$/;"	f
+strategy	hog_ui.py	/^    def strategy(score, opponent_score):$/;"	f	function:interactive_strategy	file:
+strategy_for	hog_gui.py	/^    def strategy_for(player):$/;"	f	function:take_turn	file:
+tail_points	hog.py	/^def tail_points(opponent_score):$/;"	f
+tail_strategy	hog.py	/^def tail_strategy(score, opponent_score, threshold=12, num_rolls=6):$/;"	f
+take_turn	hog.py	/^def take_turn(num_rolls, opponent_score, dice=six_sided):$/;"	f
+take_turn	hog_gui.py	/^def take_turn(prev_rolls, move_history, goal, game_rules):$/;"	f
+trace	ucb.py	/^def trace(fn):$/;"	f
+trace_play	hog_gui.py	/^def trace_play(play, strategy0, strategy1, update, score0, score1, dice, goal):$/;"	f
+winner	hog.py	/^def winner(strategy0, strategy1):$/;"	f
+wrapped	ucb.py	/^    def wrapped(*args, **kwds):$/;"	f	function:trace	file:
