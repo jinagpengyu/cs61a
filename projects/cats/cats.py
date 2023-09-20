@@ -41,7 +41,11 @@ def pick(paragraphs, select, k):
         return ''
     # END PROBLEM 1
 
-
+def if_in_subject(elem1,words):
+    for elem in words :
+        if elem == elem1 :
+            return True
+    return False 
 def about(subject):
     """Return a select function that returns whether
     a paragraph contains one of the words in SUBJECT.
@@ -60,11 +64,27 @@ def about(subject):
     "*** YOUR CODE HERE ***"
     words = []
     for elem in subject :
-        elem = remove_punctuation(elem)
         elem = lower(elem)
-        temp =  split(elem)
-        if len(temp) <= 1 : 
-            if temp ==
+        elem = remove_punctuation(elem)
+        elem = split(elem)
+        words += elem 
+        
+    def about_dogs(object) :
+        num = 0
+        split_object = split(object)
+        for elem in split_object :
+            elem1 = elem 
+            elem1 = remove_punctuation(elem1)
+            elem1 = lower(elem1)
+            if if_in_subject(elem1, words) :
+                num = num + 1
+        if num == 0 :
+            return False 
+        else :
+            return True    
+    return about_dogs 
+                
+
     
     
     # END PROBLEM 2
